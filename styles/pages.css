@@ -209,41 +209,6 @@ body {
   margin-bottom: var(--space-10);
 }
 
-.cover-phases {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-  margin-bottom: var(--space-8);
-}
-
-.cover-phase {
-  border-left: 2px solid var(--cyan);
-  padding-left: var(--space-4);
-}
-
-.cover-phase-date {
-  display: block;
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--cyan);
-  margin-bottom: var(--space-1);
-}
-
-.cover-phase strong {
-  display: block;
-  font-size: 15px;
-  color: var(--white);
-  margin-bottom: var(--space-1);
-}
-
-.cover-phase p {
-  font-size: 13px;
-  color: rgba(255,255,255,0.55);
-  line-height: 1.5;
-  margin: 0;
-}
-
 .cover-meta {
   display: flex;
   flex-wrap: wrap;
