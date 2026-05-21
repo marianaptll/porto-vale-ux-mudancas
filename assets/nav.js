@@ -17,7 +17,9 @@ const dotPages = [
   { label: 'Produtos Imóvel / Automóvel', path: 'pages/05-produtos-imovel-automovel.html' },
   { label: 'Produtos Terreno / Construção / Pesados', path: 'pages/06-produtos-terreno-construcao-pesados.html' },
   { label: 'Produtos Agro / Investimento / Solar / Empresarial', path: 'pages/07-produtos-agro-investimento-solar-empresarial.html' },
-  { label: 'Encerramento', path: 'pages/08-encerramento.html' }
+  { label: 'Adicionais', path: 'pages/08-adicionais.html' },
+  { label: 'Ajustes e Bugs', path: 'pages/09-ajustes-bugs.html' },
+  { label: 'Encerramento', path: 'pages/10-encerramento.html' }
 ];
 
 const currentUrl = new URL(window.location.href);
