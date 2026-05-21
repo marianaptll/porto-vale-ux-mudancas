@@ -1,0 +1,252 @@
+/* ============================================================
+   Porto Vale · Design System Tokens
+   Fonte: porto-vale-design-system.vercel.app
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;1,400;1,500;1,600&display=swap');
+
+:root {
+  /* Cores · Primárias */
+  --navy: #0a1628;
+  --blue-dark: #1a3a8f;
+  --blue: #2459e1;
+  --blue-mid: #3b82f6;
+  --cyan: #06b6d4;
+  --cyan-light: #38bdf8;
+
+  /* Cores · Neutras */
+  --beige: #f0ede8;
+  --white: #ffffff;
+  --gray-100: #f5f5f4;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-500: #9ca3af;
+  --gray-600: #6b7280;
+  --gray-700: #374151;
+  --black: #0f172a;
+
+  /* Cores · Status */
+  --green: #25d366;
+  --green-dark: #1da851;
+  --green-light: rgba(37, 211, 102, 0.10);
+
+  /* Tints de categoria (8%) */
+  --tint-blue: rgba(36, 89, 225, 0.08);
+  --tint-cyan: rgba(6, 182, 212, 0.10);
+  --tint-green: rgba(37, 211, 102, 0.10);
+  --tint-orange: rgba(249, 115, 22, 0.10);
+  --tint-yellow: rgba(234, 179, 8, 0.10);
+  --tint-purple: rgba(168, 85, 247, 0.10);
+
+  /* Tipografia */
+  --font-sans: 'Sora', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Lora', Georgia, serif;
+
+  /* Espaçamento (base 4px) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* Raio */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 2px rgba(10, 22, 40, 0.06);
+  --shadow-md: 0 4px 12px rgba(10, 22, 40, 0.08);
+  --shadow-lg: 0 20px 50px rgba(10, 22, 40, 0.12);
+  --shadow-xl: 0 30px 70px rgba(10, 22, 40, 0.18);
+}
+
+/* ============================================================
+   Reset · Base
+   ============================================================ */
+
+*,
+*::before,
+*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  font-family: var(--font-sans);
+  color: var(--navy);
+  background: var(--beige);
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+img, svg { display: block; max-width: 100%; }
+button { font: inherit; cursor: pointer; border: 0; background: transparent; }
+
+/* ============================================================
+   Tipografia · Escala
+   ============================================================ */
+
+.display {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: clamp(40px, 5vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.display .italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.h1 {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: clamp(32px, 4vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.h1 .italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.h2 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.h3 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.body { font-size: 16px; line-height: 1.7; }
+.body-sm { font-size: 14px; line-height: 1.6; }
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gray-600);
+}
+
+.caption {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--gray-600);
+}
+
+/* ============================================================
+   Componentes · Pill / Tag / Card
+   ============================================================ */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.tag-blue { background: var(--tint-blue); color: var(--blue); }
+.tag-cyan { background: var(--tint-cyan); color: var(--cyan); }
+.tag-green { background: var(--tint-green); color: var(--green-dark); }
+.tag-navy { background: var(--navy); color: var(--white); }
+.tag-light { background: var(--white); color: var(--navy); border: 1px solid var(--gray-200); }
+
+.tag .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: currentColor;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-md);
+}
+
+.card-flat {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  border: 1px solid var(--gray-200);
+}
+
+/* ============================================================
+   Lista de sessões
+   ============================================================ */
+
+.section-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.section-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  background: var(--gray-100);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.section-list.altered li {
+  background: var(--tint-blue);
+  color: var(--blue-dark);
+}
+
+.section-list.added li {
+  background: var(--tint-green);
+  color: var(--green-dark);
+}
+
+.section-list li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.section-list .empty {
+  background: transparent;
+  color: var(--gray-500);
+  font-style: italic;
+  border: 1px dashed var(--gray-300);
+}
+
+.section-list .empty::before { display: none; }
