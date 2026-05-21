@@ -124,6 +124,20 @@ body {
   transform: translateY(-1px);
 }
 
+.pagination a.secondary {
+  background: transparent;
+  border-color: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.5);
+  font-weight: 400;
+}
+
+.pagination a.secondary:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.8);
+  transform: translateY(-1px);
+}
+
 .pagination .disabled {
   opacity: 0.4;
   pointer-events: none;
